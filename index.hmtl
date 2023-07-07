@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cálculo para inspeção</title>
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+    <label for="inputPorcentagem">Insira a porcentagem:</label>
+    <input type="text" id="inputPorcentagem"><br>
+    <label for="inputPecas">Insira a quantidade total de peças:</label>
+    <input type="text" id="inputPecas"><br>
+    <label for="inputCodigos">Insira a quantidade de códigos: </label>
+    <input type="text" id="inputCodigos"><br>
+    
+    <button onclick="calcularInspecao()">Calcular</button>
+    <p id="resultado"></p>
+    </div>
+    </div>
+    
+ 
+</body>
+</html>
