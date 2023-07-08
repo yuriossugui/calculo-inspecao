@@ -4,13 +4,17 @@ function calcularInspecao() {
   var inputCodigos = document.getElementById("inputCodigos").value;
 
 
-  var per = inputPorcentagem / 100
+  var per = inputPorcentagem / 100;
+
   var pecas = parseInt(inputPecas);
   var codigos = parseInt(inputCodigos);
 
-  var resultado = (pecas * per) / codigos;
+  var resultadoPorCodigo = (pecas * per) / codigos;
+  var resultadoTotal = pecas * per;
 
  
-  var resultadoElement = document.getElementById("resultado");
-  resultadoElement.textContent = "Devem ser inspecionadas: "+ resultado + " Peças por código";
+  var resultadoElement = document.getElementById("resultadoPorCodigo");
+  var resultadoElement2 = document.getElementById("resultadoTotal");
+  resultadoElement.textContent = "Devem ser inspecionadas: "+ resultadoPorCodigo + " Peças por código";
+  resultadoElement2.textContent = "Devem ser inspecionadas: "+ resultadoTotal + " Peças no total." ;
 }
