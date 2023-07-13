@@ -3,25 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Cálculo para inspeção</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculo de Inspeção</title>
 </head>
 <body>
-    <div class="container">
-    <div class="box">
-    <label for="inputPorcentagem">Insira a porcentagem:</label>
-    <input type="text" id="inputPorcentagem"><br>
-    <label for="inputPecas">Insira a quantidade total de peças:</label>
-    <input type="text" id="inputPecas"><br>
-    <label for="inputCodigos">Insira a quantidade de códigos: </label>
-    <input type="text" id="inputCodigos"><br>
-    
-    <button onclick="calcularInspecao()">Calcular</button>
-    <p id="resultadoPorCodigo"></p>
-    <p id="resultadoTotal"></p>
-    </div>
-    </div>
-    
+    <main>
+        <h2>Calculo para inspeção</h2>
+        <br>
+        <label for="inputPorcentagem">INSIRA A <b>PORCENTAGEM: </b></label>
+        <input type="text" id="inputPorcentagem"><br><br>
+        <label for="inputPecas">INSIRA A QUANTIDADE <b>TOTAL DE PEÇAS: </b></label>
+        <input type="text" id="inputPecas"><br><br>
+        <label for="inputCodigos">INSIRA A QUANTIDADE <b>TOTAL DE CÓDIGOS: </b></label>
+        <input type="text" id="inputCodigos"><br><br>
+
+        <button onclick="calcularInspecao()">CALCULAR</button>
+        <p id="resultadoPorCodigo"></p>
+        <p id="resultadoTotal"></p>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
