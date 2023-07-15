@@ -3,8 +3,7 @@
 }
 
 body{
-    background-image: -webkit-linear-gradient(right, #D9D8D7, #0D2F73);
-    background-image: linear-gradient(to right, #D9D8D7, #0D2F73);
+        background:linear-gradient(to right,#D9D8D7, #0D2F73) no-repeat fixed;
 }
 
 main{
