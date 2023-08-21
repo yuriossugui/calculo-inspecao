@@ -13,6 +13,6 @@ function calcularInspecao() {
 
   var resultadoElement = document.getElementById("resultadoPorCodigo");
   var resultadoElement2 = document.getElementById("resultadoTotal");
-  resultadoElement.textContent = "DEVEM SER INSPECIONADAS: " + resultadoPorCodigo + " PEÇAS POR CÓDIGO!";
-  resultadoElement2.textContent = "DEVEM SER INSPECIONADAS: " + resultadoTotal + " PEÇAS NO TOTAL!";
+  resultadoElement.textContent = "DEVEM SER INSPECIONADAS: " + resultadoPorCodigo.toFixed(2) + " PEÇAS POR CÓDIGO!";
+  resultadoElement2.textContent = "DEVEM SER INSPECIONADAS: " + resultadoTotal.toFixed(2) + " PEÇAS NO TOTAL!";
 }
