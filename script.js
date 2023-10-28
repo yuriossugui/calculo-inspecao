@@ -1,18 +1,32 @@
-function calcularInspecao() {
-  var inputPorcentagem = document.querySelector('input[name="porcentagem"]:checked').value;
-  var inputPecas = document.getElementById("inputPecas").value;
-  var inputCodigos = document.getElementById("inputCodigos").value;
+var inputList = document.getElementById('valor');
+var inputPecas = document.getElementById('inputPecas');
+var inputCod = document.getElementById('inputCodigos');
+var appCod = document.getElementById('resultadoPorCodigo');
+var appTotal = document.getElementById('resultadoTotal');
 
-  var per = parseFloat(inputPorcentagem); 
+const btn = document.getElementById('button');
 
-  var pecas = parseInt(inputPecas);
-  var codigos = parseInt(inputCodigos);
+btn.addEventListener('click', function () {
 
-  var resultadoPorCodigo = (pecas * per) / codigos;
-  var resultadoTotal = pecas * per;
+  var list = inputList.value;
+  var pecas = inputPecas.value;
+  var cod = inputCod.value;
 
-  var resultadoElement = document.getElementById("resultadoPorCodigo");
-  var resultadoElement2 = document.getElementById("resultadoTotal");
-  resultadoElement.textContent = "DEVEM SER INSPECIONADAS: " + Math.round(resultadoPorCodigo) + " PEÇAS POR CÓDIGO!";
-  resultadoElement2.textContent = "DEVEM SER INSPECIONADAS: " + Math.round(resultadoTotal) + " PEÇAS NO TOTAL!";
-}
+ if(list == 1){
+  var resultadoPec = pecas * 0.2 ;
+  var resultado = resultadoPec/cod;
+ } else {
+  var resultadoPec = pecas * 0.4;
+  var resultado = resultadoPec/cod;
+ }
+
+ appCod.innerHTML = `Devem ser inspecionadas ${Math.round(resultadoPec)} peças no total`
+ appTotal.innerHTML = `Devem ser inspecionadas ${Math.round(resultado)} peças por codigo`
+
+ appCod.style.color = '#da0808';
+ appTotal.style.color = '#da0808';
+})
+
+
+
+
