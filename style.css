@@ -44,12 +44,6 @@ label{
     margin-bottom: 50px;
 }
 
-.resultados{
-    color: #FF0000;
-    font-size: large;
-    font-weight: bold;
-    margin-top: 15px;
-}
 
 .sub-title{
     display: flex;
@@ -57,5 +51,4 @@ label{
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-    
 }

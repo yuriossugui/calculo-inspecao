@@ -12,46 +12,68 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="./icons/calculator-fill.jpg">
+    <script>
+        function calcularInspecao() {
+            var porcentagem = document.getElementById('porcentagem').value;
+            var pecas = document.getElementById('inputPecas').value;
+            var codigos = document.getElementById('inputCodigos').value;
+            var erro = "";
+
+            porcentagem = parseFloat(porcentagem) / 100;
+            pecas = parseInt(pecas);
+            codigos = parseInt(codigos);
+
+            if (codigos > 0 && pecas > 0 && porcentagem > 0) {
+                var resultadoTotalPecas = pecas * porcentagem;
+                var resultadoPorCodigo = resultadoTotalPecas / codigos;
+
+                document.getElementById('resultadoTotal').innerHTML = "Resultado Total de Peças: " + resultadoTotalPecas;
+                document.getElementById('resultadoPorCodigo').innerHTML = "Resultado por Código: " + resultadoPorCodigo;
+                document.getElementById('erro').innerHTML = "";
+            } else {
+                erro = "Por favor, insira valores válidos.";
+                document.getElementById('erro').innerHTML = erro;
+                document.getElementById('resultadoTotal').innerHTML = "";
+                document.getElementById('resultadoPorCodigo').innerHTML = "";
+            }
+        }
+    </script>
 </head>
 
 <body>
     <main>
         <div class="preencher">
             <div class="text">
-                <div class="title">
+                <div class="title mb-3">
                     <h2>Cálculo para inspeção</h2>
                 </div>
                 <div class="sub-title">
-                    <div class="conteudo">
-                        <label for="porcentagem" id="text">SELECIONE A <b>PORCENTAGEM:</b> </label>
-                    </div>
-                    <div class="controle">
-                        <select name="" id="valor">
-                            <option value="1">25%</option>
-                            <option value="2">40%</option>
-                            <option value="3">50%</option>
-                        </select>
-                    </div>
+                    <form onsubmit="event.preventDefault(); calcularInspecao();">
+
+                        <div class="controle">
+                            <input type="number" class="form-control mb-5" id="porcentagem" placeholder="Porcentagem" required>
+                        </div>
+                        <div class="conteudo">
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="inputPecas" placeholder="Ex: 100" required />
+                                <label for="inputPecas">Quant Peças</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="inputCodigos" placeholder="Ex: 10" required />
+                                <label for="inputCodigos">Quant Codigos</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="button">CALCULAR</button>
+                    </form>
                 </div>
-                <div class="conteudo">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="inputPecas" placeholder="Ex: Sadia" />
-                        <label for="floatingInput">Quant Peças</label>
-                    </div>
-                    <div class="form-floating">
-                        <input type="text" class="form-control" id="inputCodigos" placeholder="Ex: 10.00" />
-                        <label for="floatingPassword">Quant Codigos</label>
-                    </div>
+                <div class="resultados mt-4" style="color:red;font-size: large;">
+                    <p class="text-danger" id="erro"></p>
+                    <p id="resultadoPorCodigo"></p>
+                    <p id="resultadoTotal"></p>
                 </div>
-            </div>
-            <button type="button" class="btn btn-primary" id="button">CALCULAR</button>
-            <div class="resultados">
-                <p id="resultadoPorCodigo"></p>
-                <p id="resultadoTotal"></p>
             </div>
         </div>
     </main>
 </body>
 
 </html>
-<script src="script.js"></script>
