@@ -34,7 +34,7 @@ Este projeto foi um marco no meu desenvolvimento como programador, mostrando com
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/yuriossugui/calculo-inspecao.git
    ```
 2. Configure o ambiente PHP local.
 3. Abra o arquivo principal no navegador.
