@@ -26,19 +26,9 @@ Este projeto foi um marco no meu desenvolvimento como programador, mostrando com
 
 ## 🧰 Tecnologias Utilizadas
 
-- **Frontend:** HTML e CSS
-- **Backend:** PHP
+- **Frontend:** HTML, CSS e JAVASCRIPT
 - **Cálculos:** Lógica implementada diretamente no backend para garantir a precisão.
 
-## 📝 Como Utilizar
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/yuriossugui/calculo-inspecao.git
-   ```
-2. Configure o ambiente PHP local.
-3. Abra o arquivo principal no navegador.
-4. Insira os dados necessários na página e visualize os cálculos instantaneamente.
 
 ## 🤝 Contribuição
 
